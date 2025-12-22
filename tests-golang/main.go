@@ -7,6 +7,10 @@ func Ola(nome string) string {
 	return "Olá, " + nome
 }
 
+func GoodBye(nome string) string {
+	return "Até Logo " + nome
+}
+
 func main() {
-	fmt.Println()
+	fmt.Println("Olá Mundo")
 }
