@@ -7,6 +7,6 @@ func TestOla(t *testing.T) {
 	esperado := "Olá, Mello"
 
 	if resultado != esperado {
-		t.Errorf("resultado '%s', esperado '%s'", resultado, esperado)
+		t.Errorf("resultado '%s', esperado '%s'", esperado, resultado)
 	}
 }

@@ -118,3 +118,22 @@ Se quiser, posso:
 * adicionar exemplos de `import`
 * explicar `internal/`
 * adaptar para quem vem de Java ou PHP
+
+##  Como são usados pacotes Externos dentro do Go?
+- usando o go get e passando uma url eu consigo baixar pacotes do github para usar no meu projeto.
+```go
+go get urlpackage
+```
+- Quando vamos usar um recurso do pacote que importamos devemos sempre utilizar do nome que vem depois da ultima **barra /**
+
+Exemplo: 
+```go
+github.com/badoux/checkmail => checkmail.**métodoDoPacote**
+/// Exemplo Real
+erro := checkmail.ValidateFormat("meuemail@gmail.com")
+```
+- O Go por si só tem um comando bem bacana que por si só ao rodar ele vasculha nosso arquivo modules e remove as dependências que **NÃO** estão sendo usadas:
+```go
+go mod tidy      
+```
+
