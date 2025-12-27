@@ -1,0 +1,1 @@
+# Anotações sobre Switch em Go

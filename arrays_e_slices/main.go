@@ -40,4 +40,17 @@ func main() {
 	// Pegou uma fatia a partir de um array que ja existia
 	slice2 := array1[1:3]
 	fmt.Println(slice2)
+
+	//Arrays Internos
+	fmt.Println("-----------------")
+	// Funcao make vai criar um array de 10 posicoes e retornar um array de 5 posicoes
+	slice3 := make([]float32, 5, 10)
+	fmt.Println(slice3)
+	//Tamanho
+	fmt.Println(len(slice3))
+	// Capacidade
+	fmt.Println(cap(slice3))
+	// Caso estore a capacidace do array interno adicionando valores a mais do que ele comporta
+	// O Go cria outro array e dobra o tamanho dele
+
 }

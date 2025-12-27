@@ -30,4 +30,13 @@ func main() {
 	variavelA = 301
 	fmt.Println(variavelA, *ponteiro)
 
+	var valorRef int = 103
+	var ponteiro3 *int = &valorRef
+	var ponteiro2 *int = ponteiro3
+
+	println(valorRef, *ponteiro2, *ponteiro3)
+
+	valorRef = 9
+	println(valorRef, *ponteiro2, *ponteiro3)
+
 }
