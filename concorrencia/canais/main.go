@@ -12,12 +12,8 @@ func main() {
 	// Como está em loop infinito, o channel fica esperando infinito, entrando em deadlock.
 	// Deadlock só da erro em execução
 	// É possível verificar se o canal está aberto ou fechado para evitar deadlocks.
-	for {
-		// Esperando que o canal receba um valor
-		mensagem, aberto := <-canal
-		if !aberto {
-			break
-		}
+
+	for mensagem := range canal {
 		fmt.Println(mensagem)
 
 	}
